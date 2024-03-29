@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculator</title>
+    <style type="text/css">
+        .mdiv{
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+             /* background-color: red;  */
+        }
+        .container{
+            width: 210px;
+            height: 380px;
+            background-color: lightgray;
+            border-radius: 40px;
+            padding: 40px;
+            box-shadow: 0px 0px 50px gray;
+        }
+        input{
+            height: 40px;
+            width: 40px;
+            margin: 4px;
+            border: none;
+            border-radius: 5px;
+            background-color: gray;
+            color: black;
+            font-family: arial black;
+            font-size: 15px
+    
+        }
+        .eq{
+            width: 92px;
+            margin-left: 10px;
+            background-color: orange;
+        }
+        .op{
+            background-color:transparent;
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 20px grey;
+            width: 90%;
+            text-align: right;
+        }
+        .opr{
+            background-color: orange;
+        }
+        .hed{
+            align-items: center;
+            justify-content: center;
+            color: darkred;
+            box-shadow: 0px 0px 2px green;
+            width: 70%;
+            padding: 2px;
+            background-color: aqua;
+           
+        }
+
+    </style>
+</head>
+<body>
+   
+    <div  class="mdiv">
+        <div class="container" align="center">
+            <form >
+                
+                <div>
+                    <h2 class="hed" align="center">Caculator</h2>
+                    <input type="text" name="op" id="" disabled class="op">
+                </div>
+                
+                <div>
+                    <input type="button" name="clr" value="C"  onclick="op.value=' '">
+                    <input type="button" name="Allclr" value="AC" onclick="op.value=' '">
+                    <input type="button" name="div" value="/" onclick="op.value+='/'"  class="opr">
+                    <input type="button" name="mod" value="%" onclick="op.value+='%'" class="opr">
+
+                </div>
+
+                <div>
+                    <input type="button" name="num" value="9" onclick="op.value+='9'">
+                    <input type="button" name="num" value="8" onclick="op.value+='8'">
+                    <input type="button" name="num" value="7" onclick="op.value+='7'">
+                    <input type="button" name="num" value="+" onclick="op.value+='+'" class="opr">
+
+                </div>
+
+                <div>        
+                    <input type="button" name="num" value="6" onclick="op.value+='6'">
+                    <input type="button" name="num" value="5" onclick="op.value+='5'">
+                    <input type="button" name="num" value="4" onclick="op.value+='4'">
+                    <input type="button" name="num" value="-" onclick="op.value+='-'" class="opr">
+                </div>
+
+                <div>        
+                    <input type="button" name="num" value="3" onclick="op.value+='3'">
+                    <input type="button" name="num" value="2" onclick="op.value+='2'">
+                    <input type="button" name="num" value="1" onclick="op.value+='1'">
+                    <input type="button" name="num" value="*" onclick="op.value+='*'" class="opr">
+                </div>
+
+                <div>        
+                    <input type="button" name="num" value="0" onclick="op.value+='0'">
+                    <input type="button" name="num" value="." onclick="op.value+='.'">
+                    <input type="button"  class="eq" name="num" value="=" onclick="op.value=eval(op.value)" class="opr">
+                
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
